@@ -1,0 +1,214 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f3; 
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('combate_pokemon.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+.vs {
+    background-color: #24809e;
+    border-radius: 50px;
+    padding: 4vh;
+}
+
+/* Contenedor del logo */
+#logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto; 
+    text-align: center;
+}
+
+/* Estilo de la imagen del logo */
+#logo > img {
+    width: 40%; 
+    max-width: 300px; 
+    height: auto; 
+}
+
+/* Encabezado */
+h1, h2 {
+    color: #444;
+    text-align: center;
+    margin: 10px 0;
+}
+/* battleLog */
+#battleLog{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 3vh;
+}
+
+/* Contenedor VS */
+.vs-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 3vh;
+}
+
+/* Estilo de cada Pokémon */
+.pokemon-display {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-display:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-display img {
+    width: 150px;
+    height: 150px;
+    margin: 15px 0;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-display h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.pokemon-display p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Barras de vida */
+.health-bar-section {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.health-bar-container {
+    width: 40%; 
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.health-bar-container.left {
+    align-self: flex-start;
+}
+
+.health-bar-container.right {
+    align-self: flex-end; 
+}
+
+.health-bar {
+    height: 100%;
+    width: 100%; 
+    background-color:blueviolet ; 
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Texto "VS" */
+.vs-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #e63946;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    animation: vsPulse 1.5s infinite alternate;
+    padding: 3vh;
+}
+
+/* Animación de "VS" */
+@keyframes vsPulse {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(1.3);
+        opacity: 0.9;
+    }
+}
+
+/* Botón de acción */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #008CBA;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background-color: #005f8b;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Ajuste responsive */
+@media screen and (max-width: 768px) {
+    .vs-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .vs-text {
+        font-size: 3rem;
+        margin: 20px 0;
+    }
+
+    .pokemon-display {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 80%;
+    }
+}
