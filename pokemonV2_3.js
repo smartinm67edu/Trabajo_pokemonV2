@@ -113,7 +113,7 @@ function endBattle() {
     healButton.disabled = true;
     setTimeout(() => {
         alert("Fin del combate");
-        window.location.href = "pokemonV2_1.html"; // Volver a la selección
+        window.location.href = "index.html"; // Volver a la selección
     }, 2000);
 }
 
